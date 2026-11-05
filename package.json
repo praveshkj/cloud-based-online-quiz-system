@@ -1,0 +1,27 @@
+{
+  "name": "cloud-based-online-quiz-system",
+  "version": "1.0.0",
+  "description": "5th-Semester Cloud Computing Academic Project - Cloud-Based Online Quiz System",
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently --kill-others-on-fail -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "db:setup": "node database/setup.js",
+    "test": "node test-e2e.js",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "cloud-computing",
+    "quiz-system",
+    "academic-project",
+    "react",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "Cloud Computing Project Team",
+  "license": "ISC"
+}
